@@ -32,7 +32,7 @@ const WriteToCloudFirestore = ({ id }) => {
     return (
         <div style={{ margin: '5px 0' }}>
             <form onSubmit={sendData} >
-                <input placeholder="Input status" type="text" value={status} onChange={handleStatusChange} />
+                <input placeholder="Update status" type="text" value={status} onChange={handleStatusChange} />
                 <input type="submit" value="Submit" />
             </form>
             

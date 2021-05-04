@@ -14,3 +14,50 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.logout-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 50px;
+}
+
+.home-container {
+  padding: 100px;
+}
+
+.read-write-container {
+  
+}
+
+.profile-pic-container {
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 300px;
+  justify-content: space-between;
+}
+
+.upload-container input {
+  margin-left: 80px;
+}
+
+img {
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.user-info-container {
+  display: flex;
+  justify-content: space-between;
+}

@@ -10,20 +10,40 @@ export default function Home() {
   if (user) {
     return (
       <div className="home-container">
-            <div>{user.name}</div>
-            <div>{user.email}</div>
-            <UploadFile id={user.id}/>
+      <div className="logout-container">
+        <button onClick={() => logout()} style={{ width: '100px' }}>Log Out</button>
+      </div>
+      <div >
 
-            <WriteToCloudFirestore id={user.id}  />
-            <ReadDataFromCloudFirestore id={user.id} />
+          <div className="user-info-container">
 
-            <Counter id={user.id} />
+          <div>
+              <h1>{user.name}</h1>
+              <h2>{user.email}</h2>
+              <div className="read-write-container">
+              <ReadDataFromCloudFirestore id={user.id} />
+              <WriteToCloudFirestore id={user.id}  />
+          </div>
+            </div>
+            <div className="profile-pic-container">
+              <h3>Current Profile Picture</h3>
+              <UploadFile id={user.id}/>
+            </div>
+          </div>
+
 
 
 
             <div>
-              <button onClick={() => logout()} style={{ width: '100px' }}>Log Out</button>
+              <div>Real Time Database Hit:</div>
+              <Counter id={user.id} />
             </div>
+
+
+
+
+
+        </div>
       </div>
     )
   }

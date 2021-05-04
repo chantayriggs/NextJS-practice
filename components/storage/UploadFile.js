@@ -26,11 +26,10 @@ const UploadFile = ({ id }) => {
             },
 
             function error(err) {
-                alert(error)
+                alert(err)
             },
 
-            function compleete() {
-                alert('Uploaded to firebase storage successfully!')
+            function complete() {
                 setValue(0)
             }
         )
@@ -53,28 +52,25 @@ const UploadFile = ({ id }) => {
             console.log("No uploaded profile picture yet");
         }
 
-
-
-
-    }, [id])
-
-
+    }, [id, value])
 
     return (
-        <div>
-            <progress value={value} max="100"></progress>
-            <br />
-            <input
-                type="file"
-                onChange={uploadFile}
-                ref={inputEl}
-            />
+        <div className="upload-container">
             {
                 tryImage === null ? null :
                 <div>
-                    <img src={tryImage} style={{ width: "500px"}} />
+                    <img src={tryImage} />
                 </div>
             }
+
+            <progress value={value} max="100"></progress>
+
+                    <input
+                        type="file"
+                        onChange={uploadFile}
+                        ref={inputEl}
+                    />
+
         </div>
     )
 }
