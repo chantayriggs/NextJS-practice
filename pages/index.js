@@ -33,11 +33,11 @@ export default function Home() {
 
 
 
-
-            <div className="realtime-database-container">
+          {/* TODO */}
+            {/* <div className="realtime-database-container">
               <h5>Real Time Database Hit:</h5>
               <Counter id={user.id} />
-            </div>
+            </div> */}
 
 
 
