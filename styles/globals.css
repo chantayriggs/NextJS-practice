@@ -71,7 +71,9 @@ img {
   justify-content: space-between;
 }
 
-button {
+
+
+.home-container button {
   background-color: white;
   color: #a5886f;
   border: solid #a5886f 1px;
@@ -82,8 +84,33 @@ button {
   transition: ease-in-out .3s;
 }
 
-button:hover {
+.home-container button:hover {
   background-color: #a5886f;
   color: white;
   border: solid #a5886f 1px;
+}
+
+
+
+
+.auth-wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-wrapper p {
+  padding-top: 20px;
+  padding-left: 80px;
+}
+
+
+
+
+.home-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }

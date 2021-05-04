@@ -49,7 +49,7 @@ export default function Home() {
   }
 
   else return (
-    <div>
+    <div className="home-wrapper"> 
       <p><a href="/auth">Log In!</a></p>
     </div>
   )
