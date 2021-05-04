@@ -22,11 +22,20 @@ a {
 }
 
 .home-container {
-  padding: 100px;
+  padding: 50px 100px;
 }
 
-.read-write-container {
-  
+.read-write-container form {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.read-write-container input {
+  height: 37px;
+  width: 500px;
 }
 
 .profile-pic-container {
@@ -61,3 +70,21 @@ img {
   display: flex;
   justify-content: space-between;
 }
+
+button {
+  background-color: black;
+  color: white;
+  border: solid black 1px;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
+  transition: ease-in-out .3s;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  border: solid black 1px;
+}
+
+
