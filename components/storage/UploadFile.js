@@ -4,7 +4,7 @@ import { useRef, useState } from 'react'
 import firebase from 'firebase/app'
 import 'firebase/storage'
 
-const UploadFile = () => {
+const UploadFile = ({ id }) => {
     const inputEl = useRef(null)
     const [value, setValue] = useState(0)
 
@@ -13,10 +13,13 @@ const UploadFile = () => {
         var file = inputEl.current.files[0]
 
         // create a storage ref
-        var storageRef = firebase.storage().ref('user_uploads/' + file.name)
+        // var storageRef = firebase.storage().ref('user_uploads/' + file.name)
+
+        var storageRef = firebase.storage().ref(`user_uploads/${id}`)
 
         // upload file
         var task = storageRef.put(file)
+        
 
         // update progress bar
         task.on('state_change',
@@ -29,7 +32,7 @@ const UploadFile = () => {
                 alert(error)
             },
 
-            function compleete() {
+            function complete() {
                 alert('Uploaded to firebase storage successfully!')
                 setValue(0)
             }

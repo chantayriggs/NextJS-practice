@@ -14,12 +14,12 @@ export default function Home() {
             <div>{user.email}</div>
             {user.profilePic ? <image src={user.profilePic} height={100} width={100}></image> : <p>No profile pic</p>}
 
-            <WriteToCloudFirestore />
-            <ReadDataFromCloudFirestore />
+            <WriteToCloudFirestore id={user.id}  />
+            <ReadDataFromCloudFirestore id={user.id} />
 
             <Counter id={user.id} />
 
-            <UploadFile />
+            <UploadFile id={user.id}/>
 
             <div>
               <button onClick={() => logout()} style={{ width: '100px' }}>Log Out</button>
