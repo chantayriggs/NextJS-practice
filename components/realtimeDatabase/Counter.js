@@ -24,7 +24,7 @@ const Counter = ({ id }) => {
     }
 
     return (
-        <div style={{ margin: '5px 0' }}>
+        <div>
             <button onClick={increaseCount}>Increase count</button>
             <h5>{count ? count : '0'}</h5>
         </div>

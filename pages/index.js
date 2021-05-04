@@ -34,8 +34,8 @@ export default function Home() {
 
 
 
-            <div>
-              <div>Real Time Database Hit:</div>
+            <div className="realtime-database-container">
+              <h5>Real Time Database Hit:</h5>
               <Counter id={user.id} />
             </div>
 

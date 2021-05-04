@@ -13,7 +13,13 @@ const ReadDataFromCloudFirestore = ({ id }) => {
                 .collection('myCollection')
                 .doc(id)
                 .onSnapshot(function (doc) {
-                    setReturnedData(doc.data())
+                    if (doc.data()) {
+                        setReturnedData(doc.data())
+                        
+                    } else {
+                        setReturnedData("")
+                    }
+                    
                 })
             
         } catch (error) {
@@ -25,10 +31,11 @@ const ReadDataFromCloudFirestore = ({ id }) => {
 
     return (
         <div>
-            { returnedData === null ? null : 
+            { returnedData ? 
             <div>
                 {`Current Status: ${returnedData.status}`}
             </div>
+            : null
             }
         </div>
     )
