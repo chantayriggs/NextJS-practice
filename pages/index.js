@@ -12,14 +12,14 @@ export default function Home() {
       <div className="home-container">
             <div>{user.name}</div>
             <div>{user.email}</div>
-            {user.profilePic ? <image src={user.profilePic} height={100} width={100}></image> : <p>No profile pic</p>}
+            <UploadFile id={user.id}/>
 
             <WriteToCloudFirestore id={user.id}  />
             <ReadDataFromCloudFirestore id={user.id} />
 
             <Counter id={user.id} />
 
-            <UploadFile id={user.id}/>
+
 
             <div>
               <button onClick={() => logout()} style={{ width: '100px' }}>Log Out</button>
